@@ -145,11 +145,21 @@ img {
     max-width: calc(100dvw - 8em);
   }
   .testimonialCard {
-    min-width: 15rem;
+    min-width: 15em;
   }
   img {
     width: 85px;
     height: 85px;
     aspect-ratio: 1/1;
+    margin-right: 0.5em;
+    margin-top: 2rem;
+  }
+  .reviewContent {
+    max-height: 8rem;
+    width: calc(100vw -6em);
+  }
+  .testimonial-header {
+    font-size: small;
+    text-align: left;
   }
 }

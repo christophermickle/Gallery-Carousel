@@ -27,6 +27,11 @@ body {
     top:50%;
     margin-inline:-2em;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .testimonials {
  display:flex;
  gap:2em;

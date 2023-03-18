@@ -31,4 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+   const reviewContents = document.querySelectorAll(".reviewContent");
+  reviewContents.forEach((reviewContent) => {
+    reviewContent.style.maxHeight = "9rem";
+  });
+
+  const toggleButtons = document.querySelectorAll(".toggleContent");
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const reviewContent = button.previousElementSibling;
+      if (reviewContent.style.maxHeight === "9rem") {
+        reviewContent.style.maxHeight = reviewContent.scrollHeight + "px";
+        button.textContent = "Hide";
+      } else {
+        reviewContent.style.maxHeight = "9rem";
+        button.textContent = "Read More";
+      }
+    });
+  });
 });

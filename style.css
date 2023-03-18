@@ -36,6 +36,18 @@ body {
   cursor: pointer;
 }
 
+.readMore {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline;
+  color: darkslategray;
+  width: 100%;
+  text-align: left;
+  margin-top: 1em;
+}
+
 #arrowRight:hover {
   color: rgb(20, 20, 20);
   transform: scale(1.1);
@@ -103,10 +115,17 @@ img {
   max-height: 9rem;
   text-align: left;
   margin-top: 0.3em;
+  position: relative;
+  transition: max-height 0.4s ease-in-out;
+}
+.toggleContent:hover {
+  text-decoration: underline;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 768px) {
   .testimonials {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: center;
   }
 }

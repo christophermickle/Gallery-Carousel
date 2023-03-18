@@ -57,8 +57,21 @@ body {
   transform: scale(1.1);
 }
 
-::-webkit-scrollbar {
+.testimonials::-webkit-scrollbar {
   display: none;
+}
+.testimonials::-moz-scrollbar {
+  display: none;
+}
+.testimonials::-o-scrollbar {
+  display: none;
+}
+.testimonials::-ms-scrollbar {
+  display: none;
+}
+.testimonials {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .testimonials {
@@ -67,6 +80,8 @@ body {
   scroll-behavior: smooth;
   overflow-x: scroll;
   max-width: calc(100vw - 8em);
+  -webkit-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
 }
 
@@ -91,6 +106,8 @@ img {
   max-width: 20rem;
   line-height: 1.8em;
   min-width: 20rem;
+  -webkit-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
   scroll-snap-align: start;
 }
 

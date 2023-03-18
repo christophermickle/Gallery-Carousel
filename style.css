@@ -5,39 +5,57 @@
   font-family: "nunito", sans-serif;
 }
 body {
-    height:100vh;
-    width:100vw;
-    display: grid;
-    place-items: center;
-    scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  scroll-behavior: smooth;
 }
 
 #fullWrapper {
-    position:relative;
+  position: relative;
 }
 .fa-arrow-left {
-    position:absolute;
-    left:0;
-    top:50%;
-    margin-inline:-2em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-inline: -2em;
+  font-size: x-large;
+  font-weight: bolder;
+  color: rgb(91, 91, 91);
+  cursor: pointer;
 }
 .fa-arrow-right {
-    position:absolute;
-    right:0;
-    top:50%;
-    margin-inline:-2em;
+  font-size: x-large;
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-inline: -2em;
+  color: rgb(91, 91, 91);
+  cursor: pointer;
+}
+
+#arrowRight:hover {
+  color: rgb(20, 20, 20);
+  transform: scale(1.1);
+}
+#arrowLeft:hover {
+  color: rgb(20, 20, 20);
+  transform: scale(1.1);
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .testimonials {
- display:flex;
- gap:2em;
- scroll-behavior: smooth;
- overflow-x: scroll;
- max-width:calc(100vw - 8em);
+  display: flex;
+  gap: 2em;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  max-width: calc(100vw - 8em);
+  scroll-snap-type: x mandatory;
 }
 
 img {
@@ -60,12 +78,13 @@ img {
   padding: 1rem;
   max-width: 20rem;
   line-height: 1.8em;
-  min-width:20rem;
+  min-width: 20rem;
+  scroll-snap-align: start;
 }
 
-.headingTopLayout { 
-    display:flex;
-    flex-direction:row;
+.headingTopLayout {
+  display: flex;
+  flex-direction: row;
 }
 .testimonial-header {
   display: flex;
@@ -82,8 +101,8 @@ img {
   text-overflow: ellipsis;
   overflow: hidden;
   max-height: 9rem;
-  text-align:left;
-  margin-top:0.3em;
+  text-align: left;
+  margin-top: 0.3em;
 }
 
 @media screen and (max-width: 768px) {

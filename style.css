@@ -140,4 +140,16 @@ img {
   font-weight: bolder;
 }
 
-
+@media screen and (max-width: 768px) {
+  .testimonials {
+    max-width: calc(100dvw - 8em);
+  }
+  .testimonialCard {
+    min-width: 15rem;
+  }
+  img {
+    width: 85px;
+    height: 85px;
+    aspect-ratio: 1/1;
+  }
+}

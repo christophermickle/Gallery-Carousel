@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardGap = parseInt(getComputedStyle(testimonials).gap);
     const testimonialsWidth = testimonials.offsetWidth;
     const cardsInView = Math.floor(testimonialsWidth / (cardWidth + cardGap));
-    const scrollAmount = cardsInView * (cardWidth + cardGap);
+    const scrollAmount =
+      cardsInView > 1
+        ? cardsInView * (cardWidth + cardGap)
+        : cardWidth + cardGap;
 
     if (direction === "right") {
       testimonials.scrollBy({
@@ -31,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-   const reviewContents = document.querySelectorAll(".reviewContent");
+  const reviewContents = document.querySelectorAll(".reviewContent");
   reviewContents.forEach((reviewContent) => {
     reviewContent.style.maxHeight = "9rem";
   });
